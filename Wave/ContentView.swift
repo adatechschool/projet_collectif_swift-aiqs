@@ -35,51 +35,66 @@ extension Color {
 
 
 let blue = Color("4281a4");
-
+let green = Color("0d1b2a");
 let spots = Spot(localisation : "Tahiti", spot : "Suurf", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OgQKZrohc27vcmEANxklB2ng2qnttiziBg&usqp=CAU")
 
 struct ContentView: View {
+    @State private var showDetails = false
     @State var BPWeight: String = ""
     @State var GoalBPWeight: String = ""
     var body: some View {
-    List{
-        VStack{
+        NavigationView {
+            List{
+                VStack{
         
-        Text("Localisation : Le Ploemeur")
-            .font(.headline)
-            .foregroundColor(.blue)
-            .multilineTextAlignment(.center)
-        Text("Spot : La Torche")
-            .font(.headline)
-            .foregroundColor(.blue)
-            .multilineTextAlignment(.center)
-        Image("la-torche")
-            .resizable()
-            .padding()
-            .scaledToFit()
-        }
-        VStack{
-        
-            Text(spots.localisation)
-            .font(.headline)
-            .foregroundColor(.blue)
-            .multilineTextAlignment(.center)
-            Text(spots.spot)
-            .font(.headline)
-            .foregroundColor(.blue)
-            .multilineTextAlignment(.center)
-            Image(systemName: "spot.png").data(url: URL(string: spots.img)!)
+                    Text("Localisation : Le Ploemeur")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.center)
+                    Text("Spot : La Torche")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.center)
+                    Image("la-torche")
+                        .resizable()
+                        .padding()
+                        .scaledToFit()
+                    Button("Show details") {
+                        showDetails.toggle()
+                        }
+                    .clipShape(RoundedRectangle(cornerRadius: 25, style:
+                    .continuous))
+                    .frame(width: 120, height: 25)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    if showDetails {
+                        NavigationLink(destination: DetailView()){
+                            Text("It's me")
+                            }
+                    }
+               }
+                    
+                VStack{
+                    Text(spots.localisation)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.center)
+                    Text(spots.spot)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .multilineTextAlignment(.center)
+                    Image(systemName: "spot.png").data(url: URL(string: spots.img)!)
+                }
+            }
         }
     }
 }
-}
 
-    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-    
+
 
