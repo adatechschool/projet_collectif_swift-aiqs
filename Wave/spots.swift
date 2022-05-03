@@ -39,7 +39,32 @@ let JSON = """
     "img": "https://www.visittheusa.fr/sites/default/files/styles/16_9_770x433/public/images/hero_media_image/2020-09/6f57cd1b-48da-4aba-8f30-7c1e5a3dd5cd.jpeg?itok=Yal6pdzK",
     "description": "Bring your beer and get wasted while surfing.",
     "category": "hard"
-}
+},
+{
+    "id": 3,
+    "localisation": "Taiwan",
+    "spot": "Kenting",
+    "img": "https://content.shopback.com/tw/wp-content/uploads/2020/07/08204929/10_best_taiwan_surfing_sites_6.jpg",
+    "description": "Chill with your friends in front of the sunset.",
+    "category": "easy"
+},
+{
+    "id": 4,
+    "localisation": "Landes",
+    "spot": "Hossegor",
+    "img": "https://oceanadventure.surf/wp-content/uploads/2020/10/oa-surfschool-la-centrale-hossegor-9.jpg",
+    "description": "landes lande landes",
+    "category": "normal"
+},
+{
+    "id": 5,
+    "localisation": "Croatie",
+    "spot": "Camp Kazela (Medulin)",
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/66/ed/ff/camp-kazela.jpg",
+    "description": "it's beautiful",
+    "category": "normal"
+},
+
 ]
 
 """

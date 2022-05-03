@@ -51,6 +51,7 @@ struct ContentView_Previews: PreviewProvider {
     
 struct ContentCard : View {
     @State private var showDetails = false
+    //@State private var id = 0
     var body:some View {
         NavigationView{
         VStack{
@@ -68,9 +69,10 @@ struct ContentCard : View {
                 .resizable()
                 .padding()
                 .scaledToFit()
-            NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
+                NavigationLink(destination: DetailView(id :spot.id), isActive: $showDetails) { EmptyView() }
             Button("Show details") {
                 self.showDetails=true
+                //self.id = spot.id
                 }
             .navigationTitle("Wave")
             .clipShape(RoundedRectangle(cornerRadius: 25, style:
