@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 //working fine
 
 extension Image {
@@ -36,7 +35,7 @@ extension Color {
 
 let blue = Color("4281a4");
 let green = Color("0d1b2a");
-let spots = Spot(localisation : "Tahiti", spot : "Suurf", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OgQKZrohc27vcmEANxklB2ng2qnttiziBg&usqp=CAU")
+
 
 struct ContentView: View {
     var body: some View {
@@ -44,29 +43,28 @@ struct ContentView: View {
         }
 }
 
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
-
+    
 struct ContentCard : View {
     @State private var showDetails = false
     var body:some View {
         NavigationView{
         VStack{
-
-            Text(spots.localisation)
+            ForEach(spots){
+                spot in
+            Text(spot.localisation)
                 .font(.headline)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
-            Text(spots.spot)
+            Text(spot.spot)
                 .font(.headline)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
-            Image(systemName: "spot.png").data(url: URL(string: spots.img)!)
+            Image(systemName: "spot.png").data(url: URL(string: spot.img)!)
                 .resizable()
                 .padding()
                 .scaledToFit()
@@ -80,9 +78,10 @@ struct ContentCard : View {
             .frame(width: 120, height: 25)
             .background(.blue)
             .foregroundColor(.white)
-       
+        }
+        }
     }
 }
     }
-}
+
 
