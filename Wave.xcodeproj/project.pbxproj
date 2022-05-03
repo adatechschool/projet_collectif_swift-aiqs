@@ -16,6 +16,8 @@
 		BA10C5E4281FCE04006C8961 /* WaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5E3281FCE04006C8961 /* WaveUITestsLaunchTests.swift */; };
 		BA10C5F1281FE15C006C8961 /* spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5F0281FE15C006C8961 /* spots.swift */; };
 		BAB32AFE282129C40035FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */; };
+		BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32AFF28212B8B0035FFF6 /* HomeView.swift */; };
+		BAB32B0228212EC60035FFF6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B0128212EC60035FFF6 /* LoginView.swift */; };
 		FB1E1F322820172D009BE076 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E1F312820172D009BE076 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		BA10C5E3281FCE04006C8961 /* WaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA10C5F0281FE15C006C8961 /* spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spots.swift; sourceTree = "<group>"; };
 		BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		BAB32AFF28212B8B0035FFF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
+		BAB32B0128212EC60035FFF6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = SOURCE_ROOT; };
 		FB1E1F312820172D009BE076 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,8 @@
 		BA10C5C5281FCE02006C8961 /* Wave */ = {
 			isa = PBXGroup;
 			children = (
+				BAB32B0128212EC60035FFF6 /* LoginView.swift */,
+				BAB32AFF28212B8B0035FFF6 /* HomeView.swift */,
 				BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */,
 				BA10C5C6281FCE02006C8961 /* WaveApp.swift */,
 				FB1E1F312820172D009BE076 /* DetailView.swift */,
@@ -267,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB32B0228212EC60035FFF6 /* LoginView.swift in Sources */,
 				BA10C5C9281FCE02006C8961 /* ContentView.swift in Sources */,
 				BA10C5F1281FE15C006C8961 /* spots.swift in Sources */,
 				FB1E1F322820172D009BE076 /* DetailView.swift in Sources */,
+				BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */,
 				BA10C5C7281FCE02006C8961 /* WaveApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
