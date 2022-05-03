@@ -39,38 +39,8 @@ let green = Color("0d1b2a");
 let spots = Spot(localisation : "Tahiti", spot : "Suurf", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7OgQKZrohc27vcmEANxklB2ng2qnttiziBg&usqp=CAU")
 
 struct ContentView: View {
-    @State private var showDetails = false
-    @State var BPWeight: String = ""
-    @State var GoalBPWeight: String = ""
     var body: some View {
-                NavigationView{
-                VStack{
-        
-                    Text("Localisation : Le Ploemeur")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.center)
-                    Text("Spot : La Torche")
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.center)
-                    Image("la-torche")
-                        .resizable()
-                        .padding()
-                        .scaledToFit()
-                    NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
-                    Button("Show details") {
-                        self.showDetails=true
-                        }
-                    .navigationTitle("Wave")
-                    .clipShape(RoundedRectangle(cornerRadius: 25, style:
-                    .continuous))
-                    .frame(width: 120, height: 25)
-                    .background(.blue)
-                    .foregroundColor(.white)
-               
-               }
-            }
+               ContentCard()
         }
 }
 
@@ -81,4 +51,38 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+
+struct ContentCard : View {
+    @State private var showDetails = false
+    var body:some View {
+        NavigationView{
+        VStack{
+
+            Text(spots.localisation)
+                .font(.headline)
+                .foregroundColor(.blue)
+                .multilineTextAlignment(.center)
+            Text(spots.spot)
+                .font(.headline)
+                .foregroundColor(.blue)
+                .multilineTextAlignment(.center)
+            Image(systemName: "spot.png").data(url: URL(string: spots.img)!)
+                .resizable()
+                .padding()
+                .scaledToFit()
+            NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
+            Button("Show details") {
+                self.showDetails=true
+                }
+            .navigationTitle("Wave")
+            .clipShape(RoundedRectangle(cornerRadius: 25, style:
+            .continuous))
+            .frame(width: 120, height: 25)
+            .background(.blue)
+            .foregroundColor(.white)
+       
+    }
+}
+    }
+}
 
