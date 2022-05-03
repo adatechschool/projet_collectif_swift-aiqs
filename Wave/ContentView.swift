@@ -43,8 +43,7 @@ struct ContentView: View {
     @State var BPWeight: String = ""
     @State var GoalBPWeight: String = ""
     var body: some View {
-        NavigationView {
-            List{
+                NavigationView{
                 VStack{
         
                     Text("Localisation : Le Ploemeur")
@@ -59,35 +58,20 @@ struct ContentView: View {
                         .resizable()
                         .padding()
                         .scaledToFit()
+                    NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
                     Button("Show details") {
-                        showDetails.toggle()
+                        self.showDetails=true
                         }
+                    .navigationTitle("Wave")
                     .clipShape(RoundedRectangle(cornerRadius: 25, style:
                     .continuous))
                     .frame(width: 120, height: 25)
                     .background(.blue)
                     .foregroundColor(.white)
-                    if showDetails {
-                        NavigationLink(destination: DetailView()){
-                            Text("It's me")
-                            }
-                    }
+               
                }
-                    
-                VStack{
-                    Text(spots.localisation)
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.center)
-                    Text(spots.spot)
-                        .font(.headline)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.center)
-                    Image(systemName: "spot.png").data(url: URL(string: spots.img)!)
-                }
             }
         }
-    }
 }
 
 

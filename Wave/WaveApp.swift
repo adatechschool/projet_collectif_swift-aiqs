@@ -13,5 +13,6 @@ struct WaveApp: App {
         WindowGroup {
             ContentView()
         }
+        
     }
 }
