@@ -39,7 +39,8 @@ let green = Color("0d1b2a");
 
 struct ContentView: View {
     var body: some View {
-               ContentCard()
+              // ContentCard()
+        SpotList()
         }
 }
 
@@ -48,7 +49,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-    
+
+/*
 struct ContentCard : View {
     @State private var showDetails = false
     //@State private var id = 0
@@ -69,7 +71,7 @@ struct ContentCard : View {
                 .resizable()
                 .padding()
                 .scaledToFit()
-                NavigationLink(destination: DetailView(id :spot.id), isActive: $showDetails) { EmptyView() }
+                NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
             Button("Show details") {
                 self.showDetails=true
                 //self.id = spot.id
@@ -86,4 +88,4 @@ struct ContentCard : View {
 }
     }
 
-
+*/
