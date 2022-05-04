@@ -7,13 +7,16 @@
 
 
 import SwiftUI
+import MapKit
 
 
 
 struct DetailView: View {
     var spot : Spots
     var body: some View {
-       
+        MapView(coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude))
+                       .ignoresSafeArea(edges: .top)
+                       .frame(height: 300)
         VStack{
             Text(spot.spot)
             .font(.headline)

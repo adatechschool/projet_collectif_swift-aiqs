@@ -15,7 +15,7 @@ struct SpotRow: View {
             Image(systemName: "spot.png").data(url: URL(string: spot.img)!)
                 .resizable()
                 .padding()
-                .frame(width: 50, height: 50)
+                .frame(width: 200, height: 130)
             Text(spot.spot)
 
             Spacer()
