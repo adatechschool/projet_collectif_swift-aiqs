@@ -5,7 +5,7 @@
 //  Created by Quentin LEE on 04/05/2022.
 //
 
-
+/*
 import Foundation
 import SwiftAirtable
 
@@ -38,3 +38,4 @@ struct AirtableService {
     }
     
 }
+*/
