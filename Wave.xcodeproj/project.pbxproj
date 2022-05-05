@@ -22,6 +22,8 @@
 		BAB32B062822ADEF0035FFF6 /* SpotRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B052822ADEF0035FFF6 /* SpotRow.swift */; };
 		BAB32B082822B2090035FFF6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B072822B2090035FFF6 /* MapView.swift */; };
 		BAB32B0A2822C1B70035FFF6 /* SurfDataModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */; };
+		BAEDB3BE2823C4AE00A309A7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */; };
+		BAEDB3C02823C56100A309A7 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */; };
 		FB1E1F322820172D009BE076 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E1F312820172D009BE076 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		BAB32B052822ADEF0035FFF6 /* SpotRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRow.swift; sourceTree = SOURCE_ROOT; };
 		BAB32B072822B2090035FFF6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfDataModelApi.swift; sourceTree = SOURCE_ROOT; };
+		BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		FB1E1F312820172D009BE076 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +116,9 @@
 		BA10C5C5281FCE02006C8961 /* Wave */ = {
 			isa = PBXGroup;
 			children = (
+				BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */,
 				BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */,
+				BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */,
 				BAB32B052822ADEF0035FFF6 /* SpotRow.swift */,
 				BAB32B032822AD850035FFF6 /* SpotList.swift */,
 				BAB32B0128212EC60035FFF6 /* LoginView.swift */,
@@ -289,6 +295,8 @@
 				BA10C5C9281FCE02006C8961 /* ContentView.swift in Sources */,
 				BAB32B0A2822C1B70035FFF6 /* SurfDataModelApi.swift in Sources */,
 				BA10C5F1281FE15C006C8961 /* SurfingLocalisations.swift in Sources */,
+				BAEDB3C02823C56100A309A7 /* SpotViewController.swift in Sources */,
+				BAEDB3BE2823C4AE00A309A7 /* NetworkManager.swift in Sources */,
 				BAB32B042822AD850035FFF6 /* SpotList.swift in Sources */,
 				FB1E1F322820172D009BE076 /* DetailView.swift in Sources */,
 				BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */,

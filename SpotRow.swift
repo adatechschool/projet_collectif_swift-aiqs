@@ -12,6 +12,7 @@ struct SpotRow: View {
 
     var body: some View {
         HStack {
+            /*
             Image(systemName: "spot.png").data(url: URL(string: spot.img)!)
                 .resizable()
                 .padding()
@@ -19,12 +20,21 @@ struct SpotRow: View {
             Text(spot.spot)
 
             Spacer()
+            */
+            Image(systemName: "spot.png").data(url: URL(string: spot.Photos.url)!)
+                .resizable()
+                .padding()
+                .frame(width: 200, height: 130)
+            Text(spot.Destination)
+
+            Spacer()
         }
     }
 }
-
+/*
 struct SpotRow_Previews: PreviewProvider {
     static var previews: some View {
         SpotRow(spot: spots[0])
     }
 }
+*/

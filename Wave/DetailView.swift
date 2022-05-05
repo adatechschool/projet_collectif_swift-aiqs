@@ -10,7 +10,7 @@ import SwiftUI
 import MapKit
 
 
-
+/*
 struct DetailView: View {
     var spot : Spots
     var body: some View {
@@ -55,5 +55,5 @@ struct DetailView_Previews: PreviewProvider {
 }
  */
 
-
+*/
 

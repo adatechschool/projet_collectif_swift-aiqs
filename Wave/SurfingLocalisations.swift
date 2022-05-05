@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocation
 
 //add Identifiable and ID in our JSON
-
+/*
 struct Spots : Decodable, Identifiable {
     enum Category: String, Decodable {
         case extreme, hard, normal, easy
@@ -23,12 +23,34 @@ struct Spots : Decodable, Identifiable {
     let latitude: Double
     let longitude: Double
     }
+*/
 
+struct Spots : Decodable, Identifiable {
+    class Photos: Decodable, Identifiable {
+        let id: String
+        let width: Int
+        let height: Int
+        let url: String
+    }
+    let id: String
+    let createdTime: String
+    let fields: [String]
+    let DifficultyLevel: Int
+    let Destination: String
+    let localisation: String
+    let Geocode: String
+    let MagicSeaweedLink: String
+    let Photos: Photos
+    let PeakSurSeasonBegins: String
+    let Country: String
+    let PeakSurfSeasonEnds: String
+    let Address: String
+    
+}
 
+//let spots: [Spots] = try! JSONDecoder().decode([Spots].self, from: jsonData)
 
-
-
-
+/*
 let JSON = """
 [
 {
@@ -86,8 +108,9 @@ let JSON = """
 ]
 
 """
-
+*/
+/*
 let jsonData = JSON.data(using: .utf8)!
 let spots: [Spots] = try! JSONDecoder().decode([Spots].self, from: jsonData)
-
+*/
 
