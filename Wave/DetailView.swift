@@ -10,27 +10,29 @@ import SwiftUI
 import MapKit
 
 
-/*
+
 struct DetailView: View {
-    var spot : Spots
+    //var spot : Spots
+    var photos = [Photos]()
+    var record: Record
     var body: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude))
+       /* MapView(coordinate: CLLocationCoordinate2D(latitude: spot.latitude, longitude: spot.longitude))
                        .ignoresSafeArea(edges: .top)
-                       .frame(height: 300)
+                       .frame(height: 300)*/
         VStack{
-            Text(spot.spot)
+            Text(record.fields.surfBreak[0])
             .font(.headline)
             .foregroundColor(.blue)
             .multilineTextAlignment(.center)
-            Text(spot.description)
+            Text(record.fields.destination)
                 .font(.headline)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
-            Text(spot.localisation)
+            Text(record.fields.magicSeaweedLink)
                 .font(.headline)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.center)
-            Image(systemName: "spot.png").data(url: URL(string:spot.img)!)
+            Image(systemName: "spot.png").data(url: URL(string: record.fields.photos[0].url)!)
                 .resizable()
                 .padding()
                 .scaledToFit()
@@ -45,15 +47,12 @@ struct DetailView: View {
     }
 
 
-/*
-struct DetailView_Previews: PreviewProvider {
+
+/*struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             DetailView(spot: item)
     }
 }
-}
- */
-
-*/
+}*/
 

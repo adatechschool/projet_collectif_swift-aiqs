@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct SpotList: View {
-    @State var spots = [Spots]()
+    @State var records = [Record]()
     var body: some View {
         NavigationView {
-            List(spots) { item in
-                /*NavigationLink {
-                    DetailView(spot: item)
+            List(records) { item in
+                NavigationLink {
+                    DetailView(record: item)
                 } label: {
-                    SpotRow(spot: item)
+                    SpotRow(record: item)
                 }
-                */
-                Text(item.Destination)
+                //Text(item.fields.destination)
             }
             .onAppear(){
                 getSpotData()
@@ -30,11 +29,11 @@ struct SpotList: View {
 }
     
  
-struct SpotList_Previews: PreviewProvider {
+/*struct SpotList_Previews: PreviewProvider {
     static var previews: some View {
         SpotList()
     }
-}
+}*/
 }
 
 
@@ -43,7 +42,7 @@ extension SpotList {
         NetWorkManager().getSpots {(result) in
         switch result {
         case .success(let spots): DispatchQueue.main.async {
-            self.spots = spots
+            self.records = spots.records
         }
         case .failure(let error):
             print(error.localizedDescription)

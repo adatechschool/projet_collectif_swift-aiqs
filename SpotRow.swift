@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct SpotRow: View {
-    var spot: Spots
-
+    //var spot = [Record]()
+    //var records = [Record]()
+    //var photos: Photos
+    var photos = [Photos]()
+    var record: Record
     var body: some View {
         HStack {
             /*
@@ -21,18 +24,19 @@ struct SpotRow: View {
 
             Spacer()
             */
-            Image(systemName: "spot.png").data(url: URL(string: spot.Photos.url)!)
+            //List(photos) { photo in
+            Image(systemName: "spot.png").data(url: URL(string: record.fields.photos[0].url)!)
                 .resizable()
                 .padding()
-                .frame(width: 200, height: 130)
-            Text(spot.Destination)
+                .frame(width: 200, height: 130) //}
+            Text(record.fields.destination)
 
             Spacer()
         }
     }
 }
-/*
-struct SpotRow_Previews: PreviewProvider {
+
+/*struct SpotRow_Previews: PreviewProvider {
     static var previews: some View {
         SpotRow(spot: spots[0])
     }
