@@ -7,24 +7,37 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
+
 
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region = MKCoordinateRegion()
-
     var body: some View {
         Map(coordinateRegion: $region)
             .onAppear {
                 setRegion(coordinate)
             }
     }
-
+    func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) {
+            (placemarks, error) in
+            guard error == nil else {
+                print("Geocoding error: \(error!)")
+                completion(nil)
+                return
+            }
+            completion(placemarks?.first?.location?.coordinate)
+        }
+    }
     private func setRegion(_ coordinate: CLLocationCoordinate2D) {
         region = MKCoordinateRegion(
             center: coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         )
     }
+
 }
 
 struct MapView_Previews: PreviewProvider {

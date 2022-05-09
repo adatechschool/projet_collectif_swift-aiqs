@@ -11,8 +11,9 @@ import SwiftUI
 struct WaveApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
             // LoginView()
+            HomeView()
         }
         
     }

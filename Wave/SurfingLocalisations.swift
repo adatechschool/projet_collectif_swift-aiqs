@@ -116,7 +116,7 @@ let spots: [Spots] = try! JSONDecoder().decode([Spots].self, from: jsonData)
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Spots
 struct Spots: Codable {
     let records: [Record]
 }
