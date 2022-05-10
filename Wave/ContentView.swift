@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-//working fine
-
+//Not doing anything this file
+/*
 extension Image {
     func data(url: URL)->Self{
         if let data = try?Data(contentsOf: url){
@@ -19,7 +19,8 @@ extension Image {
             .resizable()
     }
 }
-
+*/
+/*
 extension Color {
   init(_ hex: UInt, alpha: Double = 1) {
     self.init(
@@ -39,7 +40,6 @@ let green = Color("0d1b2a");
 
 struct ContentView: View {
     var body: some View {
-              // ContentCard()
         SpotList()
         }
 }
@@ -49,43 +49,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-/*
-struct ContentCard : View {
-    @State private var showDetails = false
-    //@State private var id = 0
-    var body:some View {
-        NavigationView{
-        VStack{
-            ForEach(spots){
-                spot in
-            Text(spot.localisation)
-                .font(.headline)
-                .foregroundColor(.blue)
-                .multilineTextAlignment(.center)
-            Text(spot.spot)
-                .font(.headline)
-                .foregroundColor(.blue)
-                .multilineTextAlignment(.center)
-            Image(systemName: "spot.png").data(url: URL(string: spot.img)!)
-                .resizable()
-                .padding()
-                .scaledToFit()
-                NavigationLink(destination: DetailView(), isActive: $showDetails) { EmptyView() }
-            Button("Show details") {
-                self.showDetails=true
-                //self.id = spot.id
-                }
-            .navigationTitle("Wave")
-            .clipShape(RoundedRectangle(cornerRadius: 25, style:
-            .continuous))
-            .frame(width: 120, height: 25)
-            .background(.blue)
-            .foregroundColor(.white)
-        }
-        }
-    }
-}
-    }
 
 */

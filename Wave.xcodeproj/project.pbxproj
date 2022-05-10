@@ -17,18 +17,14 @@
 		BA10C5F1281FE15C006C8961 /* SurfingLocalisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5F0281FE15C006C8961 /* SurfingLocalisations.swift */; };
 		BAB32AFE282129C40035FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */; };
 		BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32AFF28212B8B0035FFF6 /* HomeView.swift */; };
-		BAB32B0228212EC60035FFF6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B0128212EC60035FFF6 /* LoginView.swift */; };
+		BAB32B0228212EC60035FFF6 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B0128212EC60035FFF6 /* SignInView.swift */; };
 		BAB32B042822AD850035FFF6 /* SpotList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B032822AD850035FFF6 /* SpotList.swift */; };
 		BAB32B062822ADEF0035FFF6 /* SpotRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B052822ADEF0035FFF6 /* SpotRow.swift */; };
 		BAB32B082822B2090035FFF6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B072822B2090035FFF6 /* MapView.swift */; };
-		BAB32B0A2822C1B70035FFF6 /* SurfDataModelApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */; };
 		BAEDB3BE2823C4AE00A309A7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */; };
-		BAEDB3C02823C56100A309A7 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */; };
 		BAEDB3C728293FC200A309A7 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAEDB3C528293FC200A309A7 /* SourceSansPro-ExtraLight.ttf */; };
 		BAEDB3C828293FC200A309A7 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAEDB3C628293FC200A309A7 /* SourceSansPro-Black.ttf */; };
-		BAEDB3CA282944C300A309A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3C9282944C300A309A7 /* ViewController.swift */; };
-		BAEDB3CC2829453F00A309A7 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3CB2829453F00A309A7 /* CarouselCell.swift */; };
-		BAEDB3CE2829456B00A309A7 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3CD2829456B00A309A7 /* CarouselView.swift */; };
+		BAEDB3D0282A6F3300A309A7 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEDB3CF282A6F3300A309A7 /* SignInViewModel.swift */; };
 		FB1E1F322820172D009BE076 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1E1F312820172D009BE076 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,18 +59,14 @@
 		BA10C5F0281FE15C006C8961 /* SurfingLocalisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfingLocalisations.swift; sourceTree = "<group>"; };
 		BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		BAB32AFF28212B8B0035FFF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
-		BAB32B0128212EC60035FFF6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = SOURCE_ROOT; };
+		BAB32B0128212EC60035FFF6 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = SOURCE_ROOT; };
 		BAB32B032822AD850035FFF6 /* SpotList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotList.swift; sourceTree = SOURCE_ROOT; };
 		BAB32B052822ADEF0035FFF6 /* SpotRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRow.swift; sourceTree = SOURCE_ROOT; };
 		BAB32B072822B2090035FFF6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfDataModelApi.swift; sourceTree = SOURCE_ROOT; };
 		BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		BAEDB3C528293FC200A309A7 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BAEDB3C628293FC200A309A7 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
-		BAEDB3C9282944C300A309A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BAEDB3CB2829453F00A309A7 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
-		BAEDB3CD2829456B00A309A7 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		BAEDB3CF282A6F3300A309A7 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FB1E1F312820172D009BE076 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,17 +118,13 @@
 		BA10C5C5281FCE02006C8961 /* Wave */ = {
 			isa = PBXGroup;
 			children = (
-				BAEDB3CD2829456B00A309A7 /* CarouselView.swift */,
-				BAEDB3CB2829453F00A309A7 /* CarouselCell.swift */,
-				BAEDB3C9282944C300A309A7 /* ViewController.swift */,
-				BAEDB3BF2823C56100A309A7 /* SpotViewController.swift */,
 				BAEDB3C628293FC200A309A7 /* SourceSansPro-Black.ttf */,
 				BAEDB3C528293FC200A309A7 /* SourceSansPro-ExtraLight.ttf */,
-				BAB32B092822C1B70035FFF6 /* SurfDataModelApi.swift */,
+				BAEDB3CF282A6F3300A309A7 /* SignInViewModel.swift */,
 				BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */,
 				BAB32B052822ADEF0035FFF6 /* SpotRow.swift */,
 				BAB32B032822AD850035FFF6 /* SpotList.swift */,
-				BAB32B0128212EC60035FFF6 /* LoginView.swift */,
+				BAB32B0128212EC60035FFF6 /* SignInView.swift */,
 				BAB32AFF28212B8B0035FFF6 /* HomeView.swift */,
 				BAB32B072822B2090035FFF6 /* MapView.swift */,
 				BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */,
@@ -308,19 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAB32B0228212EC60035FFF6 /* LoginView.swift in Sources */,
+				BAB32B0228212EC60035FFF6 /* SignInView.swift in Sources */,
 				BA10C5C9281FCE02006C8961 /* ContentView.swift in Sources */,
-				BAB32B0A2822C1B70035FFF6 /* SurfDataModelApi.swift in Sources */,
 				BA10C5F1281FE15C006C8961 /* SurfingLocalisations.swift in Sources */,
-				BAEDB3C02823C56100A309A7 /* SpotViewController.swift in Sources */,
 				BAEDB3BE2823C4AE00A309A7 /* NetworkManager.swift in Sources */,
-				BAEDB3CA282944C300A309A7 /* ViewController.swift in Sources */,
 				BAB32B042822AD850035FFF6 /* SpotList.swift in Sources */,
 				FB1E1F322820172D009BE076 /* DetailView.swift in Sources */,
 				BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */,
-				BAEDB3CE2829456B00A309A7 /* CarouselView.swift in Sources */,
 				BAB32B062822ADEF0035FFF6 /* SpotRow.swift in Sources */,
-				BAEDB3CC2829453F00A309A7 /* CarouselCell.swift in Sources */,
+				BAEDB3D0282A6F3300A309A7 /* SignInViewModel.swift in Sources */,
 				BAB32B082822B2090035FFF6 /* MapView.swift in Sources */,
 				BA10C5C7281FCE02006C8961 /* WaveApp.swift in Sources */,
 			);

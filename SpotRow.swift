@@ -7,38 +7,25 @@
 
 import SwiftUI
 
+
+// Each spot row
 struct SpotRow: View {
-    //var spot = [Record]()
-    //var records = [Record]()
-    //var photos: Photos
+
     var photos = [Photos]()
     var record: Record
     var body: some View {
         HStack {
-            /*
-            Image(systemName: "spot.png").data(url: URL(string: spot.img)!)
-                .resizable()
-                .padding()
-                .frame(width: 200, height: 130)
-            Text(spot.spot)
-
-            Spacer()
-            */
-            //List(photos) { photo in
+           
             Image(systemName: "spot.png").data(url: URL(string: record.fields.photos[0].url)!)
                 .resizable()
                 .padding()
-                .frame(width: 200, height: 130) //}
+                .frame(width: 200, height: 130)
             Text(record.fields.destination)
+                .font(.body)
 
             Spacer()
         }
+        
     }
 }
 
-/*struct SpotRow_Previews: PreviewProvider {
-    static var previews: some View {
-        SpotRow(spot: spots[0])
-    }
-}
-*/

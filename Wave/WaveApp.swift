@@ -11,9 +11,6 @@ import SwiftUI
 struct WaveApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            // LoginView()
-        
             TabView {
             HomeView()
                 .tabItem {
@@ -25,7 +22,7 @@ struct WaveApp: App {
                     Image(systemName:"globe.europe.africa")
                     Text("Spots")
                 }
-            Text("Favorites Page")
+            Text("Favorites Page - TODO")
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Favorite")

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// List of spots
 struct SpotList: View {
     @State var records = [Record]()
     var body: some View {
@@ -17,7 +18,6 @@ struct SpotList: View {
                 } label: {
                     SpotRow(record: item)
                 }
-                //Text(item.fields.destination)
             }
             .onAppear(){
                 getSpotData()
@@ -27,15 +27,7 @@ struct SpotList: View {
     }
         
 }
-    
- 
-/*struct SpotList_Previews: PreviewProvider {
-    static var previews: some View {
-        SpotList()
-    }
-}*/
 }
-
 
 extension SpotList {
     func getSpotData(){
