@@ -13,7 +13,28 @@ struct WaveApp: App {
         WindowGroup {
             //ContentView()
             // LoginView()
+            TabView {
             HomeView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+            SpotList()
+                .tabItem {
+                    Image(systemName:"globe.europe.africa")
+                    Text("Spots")
+                }
+            Text("Favorites Page")
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                    Text("Favorite")
+                }
+            Text("Search Page")
+                .tabItem {
+                    Image(systemName:"magnifyingglass.circle")
+                    Text("Search")
+                }
+            }
         }
         
     }
