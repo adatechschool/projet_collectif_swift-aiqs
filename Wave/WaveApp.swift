@@ -13,6 +13,7 @@ struct WaveApp: App {
         WindowGroup {
             //ContentView()
             // LoginView()
+        
             TabView {
             HomeView()
                 .tabItem {
@@ -29,10 +30,10 @@ struct WaveApp: App {
                     Image(systemName: "heart.fill")
                     Text("Favorite")
                 }
-            Text("Search Page")
+            Text("Adding Page")
                 .tabItem {
-                    Image(systemName:"magnifyingglass.circle")
-                    Text("Search")
+                    Image(systemName:"square.and.pencil")
+                    Text("Add")
                 }
             }
         }
