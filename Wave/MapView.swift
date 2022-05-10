@@ -35,7 +35,10 @@ struct MapView: View {
         }
     }*/
     private func setRegion(_ geocode: String) {
-        
+        // TODO: this can remove the emoji but the string does not work
+        /*let new = geocode.components(separatedBy: CharacterSet.symbols).joined()
+        let trimmedNew = new.trimmingCharacters(in: .whitespaces)
+        guard let res = trimmedNew.base64Decoded() else {return}*/
         guard let res = geocode.base64Decoded() else {return}
         let jsonData = res.data(using: .utf8)!
         let decoder = JSONDecoder()
@@ -52,6 +55,7 @@ struct MapView: View {
 }
 
 
+
 struct GeoCode: Codable {
     let i: String
     let o: DataObj
@@ -63,6 +67,8 @@ struct DataObj: Codable {
     let status, formattedAddress: String
     let lat, lng: Double
 }
+
+
 
 
 extension String {
