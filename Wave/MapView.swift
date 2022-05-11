@@ -21,31 +21,25 @@ struct MapView: View {
                 setRegion(geocode)
             }
     }
-    /*
-    func coordinates(forAddress address: String, completion: @escaping (CLLocationCoordinate2D?) -> Void) {
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) {
-            (placemarks, error) in
-            guard error == nil else {
-                print("Geocoding error: \(error!)")
-                completion(nil)
-                return
-            }
-            completion(placemarks?.first?.location?.coordinate)
-        }
-    }*/
+   
     private func setRegion(_ geocode: String) {
-        // TODO: this can remove the emoji but the string does not work
-        /*let new = geocode.components(separatedBy: CharacterSet.symbols).joined()
-        let trimmedNew = new.trimmingCharacters(in: .whitespaces)
-        guard let res = trimmedNew.base64Decoded() else {return}*/
-        guard let res = geocode.base64Decoded() else {return}
+        // Working fine except for those with red circle
+        print(geocode)
+        let new = geocode.dropFirst()
+        let strNew = String(new)
+        let trimmedNew = strNew.trimmingCharacters(in: .whitespaces)
+       // print(strNew)
+       // print(trimmedNew)
+        guard let res = trimmedNew.base64Decoded() else {return}
+      //  print(res)
         let jsonData = res.data(using: .utf8)!
         let decoder = JSONDecoder()
         let geoCode: GeoCode = try! decoder.decode(GeoCode.self, from: jsonData)
         print(geoCode)
         let lat = geoCode.o.lat
         let lng = geoCode.o.lng
+        print(lat)
+        print(lng)
         region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: lat, longitude: lng),
             span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
@@ -84,31 +78,3 @@ extension String {
     
   
 }
-
-
-
-/*
-let JSON = """
-{"i":"Pipeline, Oahu, Hawaii","o":{"status":"OK","formattedAddress":"Ehukai Beach Park, Haleiwa, HI 96712, United States","lat":21.6650562,"lng":-158.05120469999997},"e":1535307019915}
-"""
-
-let jsonData = JSON.data(using: .utf8)!
-let decoder = JSONDecoder()
-let geoCode: GeoCode = try! decoder.decode(GeoCode.self, from: jsonData)
-print(geoCode.o.lat)
-*/
-//Mark: - Decode
-/*
- geocode = "eyJpIjoiUGlwZWxpbmUsIE9haHUsIEhhd2FpaSIsIm8iOnsic3RhdHVzIjoiT0siLCJmb3JtYXR0ZWRBZGRyZXNzIjoiRWh1a2FpIEJlYWNoIFBhcmssIEhhbGVpd2EsIEhJIDk2NzEyLCBVbml0ZWQgU3RhdGVzIiwibGF0IjoyMS42NjUwNTYyLCJsbmciOi0xNTguMDUxMjA0Njk5OTk5OTd9LCJlIjoxNTM1MzA3MDE5OTE1fQ"
- decoded = {
- "i":"Pipeline, Oahu, Hawaii",
- "o":{
- "status":"OK",
- "formattedAddress":"Ehukai Beach Park, Haleiwa, HI 96712, United States",
- "lat":21.6650562,
- "lng":-158.05120469999997},
- "e":1535307019915
- 
- }
- 
- */
