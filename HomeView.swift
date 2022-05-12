@@ -71,13 +71,20 @@ struct CardView: View{
 
     var imgs = ["superbank", "pipeline", "bermuda", "namibia"]
     var locs = ["Super Bank", "Pipeline", "Horseshoe Bay Beach", "Skeleton Bay"]
+    var ratings = ["🌊🌊🌊🌊", "🌊🌊🌊🌊", "🌊", "🌊🌊🌊🌊🌊"]
     @State private var index = 0
     var body: some View{
         ForEach((0..<4), id: \.self) { index
             in
             VStack{
-                Text(locs[index])
-                        .font(.headline)
+                HStack{
+                    Text(locs[index])
+                            .font(.largeTitle)
+                    Text(ratings[index])
+                        .font(.title)
+                }
+                Divider()
+                
                 Image(imgs[index])
                 .resizable()
                 .padding()
