@@ -12,53 +12,48 @@ import MapKit
 
 
 struct DetailView: View {
-    //var spot : Spots
-    var photos = [Photos]()
-    var record: Record
+    var spot : Spot
+
     var body: some View {
-        MapView(geocode:
-                    record.fields.geocode)
-            .ignoresSafeArea(edges: .top)
-            .frame(height: 250)
+          MapView(coordinate: CLLocationCoordinate2D(latitude: spot.lat, longitude: spot.lng))
+                    .ignoresSafeArea(edges: .top)
+                    .frame(height: 300)
         VStack{
             HStack{
-                Text(record.fields.destination)
+                Text(spot.destination)
                     .font(.headline)
                     .foregroundColor(.blue)
                     .multilineTextAlignment(.center)
-                //                Text(record.fields.difficultyLevel.times {
-                //                    var s = "";
-                //                    s.append(Character("🌊")
-                //
-                Text(record.fields.difficultyLevel.toEmoji())
+     
+                Text(spot.difficultyLevel.toEmoji())
             }
         }
-        Text(record.fields.address)
+        Text(spot.address)
             .font(.headline)
             .foregroundColor(.blue)
-        Text(record.fields.surfBreak[0])
+        Text(spot.surfBreak)
             .font(.headline)
             .foregroundColor(.blue)
             .multilineTextAlignment(.center)
         
         HStack {
             Text("Peak surf season begins: ")
-            Text(record.fields.peakSurfSeasonBegins)
+            Text(spot.peakSurfSeasonBegins)
             
         }
         HStack{
             Text("Peak surf season ends: ")
-            Text(record.fields.peakSurfSeasonEnds)
+            Text(spot.peakSurfSeasonEnds)
             
         }
         
-        Image(systemName: "spot.png").data(url: URL(string: record.fields.photos[0].url)!)
+        Image(systemName: "spot.png").data(url: URL(string: spot.photos)!)
             .resizable()
             .padding()
             .scaledToFit()
             .frame(width: 450, height: 250)
         
-        Link(destination: URL(string: record.fields.magicSeaweedLink)!) {
+        Link(destination: URL(string: spot.magicSeaweedLink)!) {
             Text("More info")
                 .font(.headline)
             Image(systemName: "moon.fill")
@@ -82,7 +77,7 @@ extension Int {
     
     func toEmoji()->String{
         var emoji = ""
-        for i in 0..<self{
+        for _ in 0..<self{
             emoji.append("🌊")
         }
         return emoji

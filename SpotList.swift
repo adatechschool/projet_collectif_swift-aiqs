@@ -9,15 +9,18 @@ import SwiftUI
 
 // List of spots
 struct SpotList: View {
-    @State var records = [Record]()
+ 
+    @State var SurfingSpots = [Spot]()
+
     var body: some View {
         NavigationView {
-            List(records) { item in
-                NavigationLink {
-                    DetailView(record: item)
-                } label: {
-                    SpotRow(record: item)
-                }
+            List(SurfingSpots) {
+                item in
+                NavigationLink{
+                    DetailView(spot: item)
+                } label: { SpotRow(spot: item)
+            }
+    
             }
             .onAppear(){
                 getSpotData()
@@ -29,12 +32,15 @@ struct SpotList: View {
 }
 }
 
+
 extension SpotList {
     func getSpotData(){
         NetWorkManager().getSpots {(result) in
+            print(result)
         switch result {
         case .success(let spots): DispatchQueue.main.async {
-            self.records = spots.records
+            self.SurfingSpots = spots
+            print(spots)
         }
         case .failure(let error):
             print(error.localizedDescription)
@@ -42,3 +48,4 @@ extension SpotList {
         }
     }
 }
+

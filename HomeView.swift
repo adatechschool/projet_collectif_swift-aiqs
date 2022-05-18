@@ -15,6 +15,7 @@ struct HomeView: View {
             Color.clear
       
            VStack{
+            
                 //Logo
                 HStack {
                     Image("wave")
