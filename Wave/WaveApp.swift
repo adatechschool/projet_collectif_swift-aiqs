@@ -27,7 +27,7 @@ struct WaveApp: App {
                     Image(systemName: "heart.fill")
                     Text("Favorite")
                 }
-            Text("Adding Page")
+            SpotForm()
                 .tabItem {
                     Image(systemName:"square.and.pencil")
                     Text("Add")

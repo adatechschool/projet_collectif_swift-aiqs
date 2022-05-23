@@ -10,7 +10,7 @@ import SwiftUI
 // List of spots
 struct SpotList: View {
  
-    @State var SurfingSpots = [Spot]()
+    @State var SurfingSpots = [Surf]()
 
     var body: some View {
         NavigationView {

@@ -9,8 +9,9 @@ import Foundation
 
 
 
-struct Spot: Codable, Identifiable {
-    let id, surfBreak: String
+struct Surf: Codable, Identifiable {
+    let id: Int
+    let surfBreak: String
     let difficultyLevel: Int
     let destination: String
     let magicSeaweedLink: String
@@ -34,4 +35,4 @@ struct Spot: Codable, Identifiable {
     }
 }
 
-typealias Spots = [Spot]
+typealias Surves = [Surf]

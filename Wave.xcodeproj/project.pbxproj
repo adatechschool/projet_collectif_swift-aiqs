@@ -15,6 +15,7 @@
 		BA10C5E2281FCE04006C8961 /* WaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5E1281FCE04006C8961 /* WaveUITests.swift */; };
 		BA10C5E4281FCE04006C8961 /* WaveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5E3281FCE04006C8961 /* WaveUITestsLaunchTests.swift */; };
 		BA10C5F1281FE15C006C8961 /* SurfingLocalisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA10C5F0281FE15C006C8961 /* SurfingLocalisations.swift */; };
+		BA29F22928366E89000B6C5D /* PostSpots.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA29F22828366E89000B6C5D /* PostSpots.swift */; };
 		BAB32AFE282129C40035FFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */; };
 		BAB32B0028212B8B0035FFF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32AFF28212B8B0035FFF6 /* HomeView.swift */; };
 		BAB32B0228212EC60035FFF6 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB32B0128212EC60035FFF6 /* SignInView.swift */; };
@@ -57,6 +58,7 @@
 		BA10C5E1281FCE04006C8961 /* WaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveUITests.swift; sourceTree = "<group>"; };
 		BA10C5E3281FCE04006C8961 /* WaveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA10C5F0281FE15C006C8961 /* SurfingLocalisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfingLocalisations.swift; sourceTree = "<group>"; };
+		BA29F22828366E89000B6C5D /* PostSpots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSpots.swift; sourceTree = "<group>"; };
 		BAB32AFD282129C40035FFF6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		BAB32AFF28212B8B0035FFF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = SOURCE_ROOT; };
 		BAB32B0128212EC60035FFF6 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = SOURCE_ROOT; };
@@ -120,6 +122,7 @@
 			children = (
 				BAEDB3C628293FC200A309A7 /* SourceSansPro-Black.ttf */,
 				BAEDB3C528293FC200A309A7 /* SourceSansPro-ExtraLight.ttf */,
+				BA29F22828366E89000B6C5D /* PostSpots.swift */,
 				BAEDB3CF282A6F3300A309A7 /* SignInViewModel.swift */,
 				BAEDB3BD2823C4AE00A309A7 /* NetworkManager.swift */,
 				BAB32B052822ADEF0035FFF6 /* SpotRow.swift */,
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB32B0228212EC60035FFF6 /* SignInView.swift in Sources */,
+				BA29F22928366E89000B6C5D /* PostSpots.swift in Sources */,
 				BA10C5C9281FCE02006C8961 /* ContentView.swift in Sources */,
 				BA10C5F1281FE15C006C8961 /* SurfingLocalisations.swift in Sources */,
 				BAEDB3BE2823C4AE00A309A7 /* NetworkManager.swift in Sources */,

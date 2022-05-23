@@ -12,7 +12,7 @@ import SwiftUI
 struct SpotRow: View {
 
    
-    var spot: Spot
+    var spot: Surf
     var body: some View {
         HStack {
            

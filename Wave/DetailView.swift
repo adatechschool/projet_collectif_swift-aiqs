@@ -12,7 +12,7 @@ import MapKit
 
 
 struct DetailView: View {
-    var spot : Spot
+    var spot : Surf
 
     var body: some View {
           MapView(coordinate: CLLocationCoordinate2D(latitude: spot.lat, longitude: spot.lng))

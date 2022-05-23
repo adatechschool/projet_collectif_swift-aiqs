@@ -9,7 +9,7 @@ import Foundation
 
 // Get request 
 class NetWorkManager {
-    func getSpots(completion: @escaping (Result<[Spot], Error>) -> Void){
+    func getSpots(completion: @escaping (Result<[Surf], Error>) -> Void){
        
         guard let url = URL(string:"http://localhost:8080/api/spots") else {
            print("invalid url");
@@ -24,7 +24,7 @@ class NetWorkManager {
             }
             do {
                
-                let spots = try! JSONDecoder().decode([Spot].self, from: data!)
+                let spots = try! JSONDecoder().decode([Surf].self, from: data!)
              
                 completion(.success(spots))
                
